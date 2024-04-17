@@ -1,15 +1,11 @@
-# Team-010-28-homework4
-
-#### Team Members
-Nate Stearley - stear137  
-Ryan Hill     - hill1186  
-Caleb Otto    - otto0232  
-Sean O'Neill   - oneil786  
+# Cambio Project Submission 
 
 ## Complete Project Overview
 This program's goal is to simulate drones picking up passengers and moving them from one destination to another within the University of Minnesota Campus. Similar to the functionality of Uber, users book trips by specifying where they want to be picked up and where they want to be dropped off. This trip is added to a queue and a drone is then tasked with picking up the passengers and moving them to their destination. The user can specify one of three path finding algorithms when booking their trip which dictates how the drone finds the path it needs to take. Each drone is also equipped with a battery. This battery drains slowly if the drone is not over one of many charging stations around the University Campus. Along with adding batteries to Drone, we've also implemented data collection functionality. Our program collects data on the number of trips each drone makes, the distance each drone travels, how much battery each drone uses and recharges. This data is stored in a CSV file and, after the simulation ends, this data is interpreted and summarized to the user.
 
-Link to a short YouTube video explaining the project: https://youtu.be/UUufq51yfnQ
+This project was created in CSCI 3081W, a software engineering course focusing on sound development stratigies and development architecture used in the creation of large(r) software. The majority of code in this repo is javascript that handles the webserver and program visualization - THIS CODE WAS GIVEN TO US AND WE DID NOT MAKE ANY CHANGES TO IT. The parts we were responsible for developing included the pathfinding algorithms, drone (car) and robot (person) behvaior, and battery recharge stations. The code we wrote can be found in libs/transit.
+
+I worked with three other people to create this and we learned about and used an AGILE/SCRUM workflow. This included creating a product backlog, interviewing clients (our professor) to discuss needs, and running sprints.
 
 ## How to Run the Simulation
 ### Running the Program Through Git Cloning
@@ -32,15 +28,15 @@ Navigate to http://127.0.0.1:<PORT>/schedule.html and you should see a page to s
 
 
 ### Running the Program Through Docker
-Sign into DockerHub and navigate to <https://hub.docker.com/repository/docker/sean786/complete_drone_sim/general>
+Sign into DockerHub and navigate to ![https://hub.docker.com/r/natestearley/drone_sim](https://hub.docker.com/r/natestearley/drone_sim)
 
 After cloning the docker image it can be run by doing this
 ```bash
 docker run --rm -it -p <PORT>:<PORT> <image_name>
 ```
-*Note: PORT will depend on what port you want to use. <image_name> will be sean786/complete_drone_sim. If you use port 8082 then this it what it will look like*
+*Note: PORT will depend on what port you want to use. <image_name> will be natestearley/drone_sim. If you use port 8082 then this it what it will look like*
 ```bash
-docker run --rm -it -p 8082:8082 sean786/complete_drone_sim
+docker run --rm -it -p 8082:8082 natestearley/drone_sim
 ```
 
 Navigate to http://127.0.0.1:<PORT> and you should see a visualization.
