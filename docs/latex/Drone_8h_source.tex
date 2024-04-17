@@ -1,0 +1,76 @@
+\hypertarget{Drone_8h_source}{}\doxysection{Drone.\+h}
+\label{Drone_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/Drone.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/Drone.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DRONE\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DRONE\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}IEntity.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}IStrategy.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}math/vector3.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDrone}{Drone}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIEntity}{IEntity}}\ \{}
+\DoxyCodeLine{00017\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classDrone}{Drone}}(JsonObject\ \&obj);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \ \ \mbox{\hyperlink{classDrone_a0747ad185696ed5f394e2fb82cb6ef0d}{\string~Drone}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classDrone_aa52b337112a48a7abe67366343b133de}{GetSpeed}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ speed;\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classDrone_ac5f8573f0450d20c8cf47f45e4bd964c}{GetPosition}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ position;\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classDrone_a06f70196245814bed4d3757ee46b5f84}{GetDirection}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ direction;\ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classDrone_a1f9bc71d6b097c82dc03e29446a9a714}{GetDestination}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ destination;\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classDrone_a37ef94b1a742c41f75cb669d48754c4a}{GetColor}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ color;\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ [[nodiscard]]\ JsonObject\ \mbox{\hyperlink{classDrone_ad544754bc38661c005a3e90335d7767c}{GetDetails}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ details;\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDrone_a1642ae1a1368088290cd44197fa07d3b}{GetAvailability}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ available;\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDrone_a628fc0cf66f64c88b6a0804e85170728}{GetNearestEntity}}(\textcolor{keyword}{const}\ std::vector<IEntity\ *>\ \&scheduler);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDrone_a11e525c730ee22bbd966127b9a99b3c9}{Update}}(\textcolor{keywordtype}{double}\ dt,\ \textcolor{keyword}{const}\ std::vector<IEntity\ *>\ \&scheduler)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDrone_a7db7ae10e41106439dde749d59a23d7c}{SetPosition}}(\mbox{\hyperlink{classVector3}{Vector3}}\ pos\_)\textcolor{keyword}{\ override\ }\{\ position\ =\ pos\_;\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDrone_ab9fcca584928c65fc5edaaba0c153164}{SetDirection}}(\mbox{\hyperlink{classVector3}{Vector3}}\ dir\_)\textcolor{keyword}{\ override\ }\{\ direction\ =\ dir\_;\ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00100\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDrone_a8667fd0c85c145c7745651ad5a1b08b9}{SetDestination}}(\mbox{\hyperlink{classVector3}{Vector3}}\ des\_)\textcolor{keyword}{\ override\ }\{\ destination\ =\ des\_;\ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00106\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDrone_abf588bf30455314cac77373386273de4}{SetColor}}(\textcolor{keyword}{const}\ std::string\ \&col\_)\textcolor{keyword}{\ override\ }\{\ color\ =\ col\_;\ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDrone_adb8af37d811c7f5131d5e048c3f89dc5}{Rotate}}(\textcolor{keywordtype}{double}\ angle)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00118\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDrone_a724b8a72357c589fea7dd28aed4e75f6}{Jump}}(\textcolor{keywordtype}{double}\ height)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \ \ \mbox{\hyperlink{classDrone_af60150a86c9fbe79ef1995e9b401b46b}{Drone}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDrone}{Drone}}\ \&drone)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00125\ \ \ \mbox{\hyperlink{classDrone}{Drone}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classDrone}{Drone}}\ \&drone)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00128\ \ \ \textcolor{comment}{//\ explicitly\ define\ default\ constructor\ as\ protected\ for\ decorator\ classes}}
+\DoxyCodeLine{00129\ \ \ \mbox{\hyperlink{classDrone}{Drone}}()\ \{\}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00132\ \ \ JsonObject\ details;}
+\DoxyCodeLine{00133\ \ \ \mbox{\hyperlink{classVector3}{Vector3}}\ position;}
+\DoxyCodeLine{00134\ \ \ \mbox{\hyperlink{classVector3}{Vector3}}\ direction;}
+\DoxyCodeLine{00135\ \ \ std::string\ color\ =\ \textcolor{stringliteral}{"{}None"{}};\ \ \textcolor{comment}{//\ None\ means\ default\ color}}
+\DoxyCodeLine{00136\ \ \ \textcolor{keywordtype}{float}\ jumpHeight\ =\ 0;}
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{bool}\ goUp\ =\ \textcolor{keyword}{true};\ \ \textcolor{comment}{//\ jump\ helper}}
+\DoxyCodeLine{00138\ \ \ \mbox{\hyperlink{classVector3}{Vector3}}\ destination;}
+\DoxyCodeLine{00139\ \ \ \textcolor{keywordtype}{float}\ speed\ =\ 0;}
+\DoxyCodeLine{00140\ \ \ \textcolor{keywordtype}{bool}\ available\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00141\ \ \ \textcolor{keywordtype}{bool}\ pickedUp\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00142\ \ \ \mbox{\hyperlink{classIEntity}{IEntity}}\ *nearestEntity\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00143\ \ \ \mbox{\hyperlink{classIStrategy}{IStrategy}}\ *toRobot\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00144\ \ \ \mbox{\hyperlink{classIStrategy}{IStrategy}}\ *toFinalDestination\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00145\ \};}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

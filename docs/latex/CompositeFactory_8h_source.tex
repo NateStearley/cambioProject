@@ -1,0 +1,24 @@
+\hypertarget{CompositeFactory_8h_source}{}\doxysection{Composite\+Factory.\+h}
+\label{CompositeFactory_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/CompositeFactory.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/CompositeFactory.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ COMPOSITE\_FACTORY\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ COMPOSITE\_FACTORY\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}IEntityFactory.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCompositeFactory}{CompositeFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIEntityFactory}{IEntityFactory}}\ \{}
+\DoxyCodeLine{00010\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{classIEntity}{IEntity}}\ *\mbox{\hyperlink{classCompositeFactory_a61899eaa583d8bdbd44ac664f12a2bb1}{CreateEntity}}(JsonObject\ \&entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCompositeFactory_a1e9833480826a2661f293d7e2d6358d5}{AddFactory}}(\mbox{\hyperlink{classIEntityFactory}{IEntityFactory}}\ *factoryEntity);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{classCompositeFactory_a5774af42fc715eb3cb03ef97f7b2571e}{\string~CompositeFactory}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ std::vector<IEntityFactory\ *>\ componentFactories;}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

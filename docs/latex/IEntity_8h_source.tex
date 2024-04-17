@@ -1,0 +1,81 @@
+\hypertarget{IEntity_8h_source}{}\doxysection{IEntity.\+h}
+\label{IEntity_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/IEntity.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/IEntity.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ENTITY\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ENTITY\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}graph.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}math/vector3.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}util/json.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }routing;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classIEntity}{IEntity}}\ \{}
+\DoxyCodeLine{00023\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \mbox{\hyperlink{classIEntity_ad59bd0827b3f6e19b82a4e28e5400fe3}{IEntity}}()\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ currentId\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{id}\ =\ currentId;}
+\DoxyCodeLine{00030\ \ \ \ \ currentId++;}
+\DoxyCodeLine{00031\ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classIEntity_a8aea4fbca51d17a0ce314aaa4633f28e}{\string~IEntity}}()\ \{\ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classIEntity_a5d4d1c3d5da8a816fe03522cd0b4fcb3}{graph}};\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classIEntity_a2bfa9ab304ff33b252fbd5a707e42995}{GetId}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classIEntity_adb3b46323a3c0269c5f108305a36737c}{id}};\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{GetPosition}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{GetDirection}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{GetDestination}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ JsonObject\ \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{GetDetails}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classIEntity_a1326f6c0e0377a4fbde8a8c02fb6ccb3}{GetColor}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}None"{}};\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{GetSpeed}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classIEntity_a90348881691a37d5c3d63265ed3463b1}{GetAvailability}}()\textcolor{keyword}{\ const\ }\{\}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classIEntity_a14badced4c9d744bcc210cb3c1260ee1}{GetStrategyName}}()\textcolor{keyword}{\ const\ }\{\}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIEntity_af4fb74001e3de725f74979d7de059eaa}{SetStrategyName}}(\textcolor{keyword}{const}\ std::string\ \&strategyName\_)\ \{\}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIEntity_adf3acdf4764f5ff25f89d7814e39551c}{SetAvailability}}(\textcolor{keywordtype}{bool}\ choice)\ \{\}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00111\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIEntity_a4f46d66775cc404c76064908d6c2090d}{Update}}(\textcolor{keywordtype}{double}\ dt,\ \textcolor{keyword}{const}\ std::vector<IEntity\ *>\ \&scheduler)\ \{\}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00117\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIEntity_a55992d3fff30c3e47fb53d44097d9a19}{SetGraph}}(\textcolor{keyword}{const}\ IGraph\ *graph\_)\ \{\ this-\/>\mbox{\hyperlink{classIEntity_a5d4d1c3d5da8a816fe03522cd0b4fcb3}{graph}}\ =\ graph\_;\ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{SetPosition}}(\mbox{\hyperlink{classVector3}{Vector3}}\ pos\_)\ \{\}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{SetDirection}}(\mbox{\hyperlink{classVector3}{Vector3}}\ dir\_)\ \{\}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00135\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}{SetDestination}}(\mbox{\hyperlink{classVector3}{Vector3}}\ des\_)\ \{\}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00141\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIEntity_a94cf592e6470ba7dd64b7fe3654c82ee}{SetColor}}(\textcolor{keyword}{const}\ std::string\ \&col\_)\ \{\}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00147\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIEntity_a4c109baa4179c28422623a7d3b2e9f82}{Rotate}}(\textcolor{keywordtype}{double}\ angle)\ \{\}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00153\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIEntity_a4e8eb64a324e1196be039c5e2a293b7a}{Jump}}(\textcolor{keywordtype}{double}\ height)\ \{\}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00162\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classIEntity_a012bab9ded66c8cc27419e0ccf76599d}{Random}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ min,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ max)\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ std::random\_device\ random\_device;}
+\DoxyCodeLine{00164\ \ \ \ \ std::mt19937\ random\_number\_generator(random\_device());}
+\DoxyCodeLine{00165\ \ \ \ \ std::uniform\_real\_distribution<>\ uniform\_distribution(min,\ max);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{return}\ uniform\_distribution(random\_number\_generator);}
+\DoxyCodeLine{00168\ \ \ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00174\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classIEntity_adb3b46323a3c0269c5f108305a36737c}{id}};}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00179\ \ \ \textcolor{keyword}{const}\ IGraph\ *\mbox{\hyperlink{classIEntity_a5d4d1c3d5da8a816fe03522cd0b4fcb3}{graph}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00180\ \};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

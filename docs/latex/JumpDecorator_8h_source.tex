@@ -1,0 +1,21 @@
+\hypertarget{JumpDecorator_8h_source}{}\doxysection{Jump\+Decorator.\+h}
+\label{JumpDecorator_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/JumpDecorator.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/JumpDecorator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JUMP\_DECORATOR\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JUMP\_DECORATOR\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}CelebrationDecorator.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classJumpDecorator}{JumpDecorator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCelebrationDecorator}{CelebrationDecorator}}\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classJumpDecorator_a0895afdd51622db154ddf48cc7cf8c85}{JumpDecorator}}(\mbox{\hyperlink{classIStrategy}{IStrategy}}\ *\mbox{\hyperlink{classCelebrationDecorator_abd8ba74a8cf4dc060feac318fc10e2a9}{strategy}})}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ :\ \mbox{\hyperlink{classCelebrationDecorator}{CelebrationDecorator}}(\mbox{\hyperlink{classCelebrationDecorator_abd8ba74a8cf4dc060feac318fc10e2a9}{strategy}})\ \{\};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classJumpDecorator_aa11aecafd7d9d181999a04a6932d9f96}{Move}}(\mbox{\hyperlink{classIEntity}{IEntity}}\ *entity,\ \textcolor{keywordtype}{double}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ JUMP\_DECORATOR\_H\_}}
+
+\end{DoxyCode}

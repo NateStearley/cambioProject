@@ -1,0 +1,53 @@
+\hypertarget{ElectricDrone_8h_source}{}\doxysection{Electric\+Drone.\+h}
+\label{ElectricDrone_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/ElectricDrone.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/ElectricDrone.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DBATTERYD\_DECO\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DBATTERYD\_DECO\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}RechargeStation.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}DroneDeco.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}DataCollection.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{enum}\ DroneState\ \{}
+\DoxyCodeLine{00016\ \ \ WaitingAtRechargeStation,}
+\DoxyCodeLine{00020\ \ \ Dead,}
+\DoxyCodeLine{00024\ \ \ TransportingPassenger,}
+\DoxyCodeLine{00029\ \ \ ReturningToRechargeStation,}
+\DoxyCodeLine{00033\ \ \ Recharging}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classElectricDrone}{ElectricDrone}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classDroneDeco}{DroneDeco}}\ \{}
+\DoxyCodeLine{00043\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classElectricDrone}{ElectricDrone}}(\mbox{\hyperlink{classDrone}{Drone}}\ *drone);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \mbox{\hyperlink{classElectricDrone_ae329ae0c4a6aab584accdf86af9c8ba4}{\string~ElectricDrone}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classElectricDrone_a5fbbdd6bccd7bf831903a116667ecd19}{GetBattery}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ this-\/>battery;\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classElectricDrone_a39c00029a221a0bafa83941b62f71c9c}{SetBattery}}(\textcolor{keywordtype}{float}\ charge)\ \{\ this-\/>battery\ =\ charge;\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classElectricDrone_a2009881311476a56d4cbb749140d443b}{Update}}(\textcolor{keywordtype}{double}\ dt,\ \textcolor{keyword}{const}\ std::vector<IEntity\ *>\ \&scheduler)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00085\ \ \ \mbox{\hyperlink{structDroneTotals}{DroneTotals}}\ inputter;}
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordtype}{float}\ battery;}
+\DoxyCodeLine{00087\ \ \ \textcolor{comment}{//\ battery\ charge\ loss\ per\ unit\ time,\ gets\ multiplied\ by\ dt\ in\ Update}}
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{float}\ depletionRate\ =\ 0.7;}
+\DoxyCodeLine{00089\ \ \ \textcolor{comment}{//\ set\ a\ battery\ efficiency\ since\ actual\ times\ vary}}
+\DoxyCodeLine{00090\ \ \ \textcolor{comment}{//ensures\ the\ drone\ does\ not\ die}}
+\DoxyCodeLine{00091\ \ \ \textcolor{keywordtype}{float}\ efficiency\ =\ 0.90;}
+\DoxyCodeLine{00092\ \ \ \textcolor{keywordtype}{bool}\ firstStation\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00093\ \ \ \mbox{\hyperlink{classRechargeStation}{RechargeStation}}\ *nearestRechargeStation\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00094\ \ \ \mbox{\hyperlink{classIStrategy}{IStrategy}}\ *toRechargeStation\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00095\ \ \ DroneState\ state\ =\ DroneState::WaitingAtRechargeStation;}
+\DoxyCodeLine{00096\ \ \ \mbox{\hyperlink{classIEntity}{IEntity}}\ *currentRobot\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00107\ \ \ \textcolor{keywordtype}{bool}\ IsCurrentTripPossible(\textcolor{keywordtype}{double}\ dt,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<IEntity\ *>\ \&scheduler);}
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

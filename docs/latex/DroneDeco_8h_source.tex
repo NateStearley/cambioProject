@@ -1,0 +1,64 @@
+\hypertarget{DroneDeco_8h_source}{}\doxysection{Drone\+Deco.\+h}
+\label{DroneDeco_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/DroneDeco.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/DroneDeco.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DRONE\_DECO\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DRONE\_DECO\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}IEntity.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Drone.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}math/vector3.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDroneDeco}{DroneDeco}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classDrone}{Drone}}\ \{}
+\DoxyCodeLine{00017\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classDroneDeco}{DroneDeco}}(\mbox{\hyperlink{classDrone}{Drone}}\ *\mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{classDroneDeco_a56999b2eb5386086eb85327968619a8a}{\string~DroneDeco}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \mbox{\hyperlink{classDrone}{Drone}}\ *\mbox{\hyperlink{classDroneDeco_ac459d1c022bbc18b88c583b9771769e5}{GetHostDrone}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}};\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDroneDeco_a7b83d7f2d8cf99b005622ad443affedc}{SetGraph}}(\textcolor{keyword}{const}\ routing::IGraph\ *\mbox{\hyperlink{classIEntity_a5d4d1c3d5da8a816fe03522cd0b4fcb3}{graph}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDroneDeco_a983290f9180f6cb1b602d20792fb4bc8}{Update}}(\textcolor{keywordtype}{double}\ dt,\ \textcolor{keyword}{const}\ std::vector<IEntity\ *>\ \&scheduler)\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classDroneDeco_a8842f0e9ddd4ad3b56ca938f6767132f}{GetPosition}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_ac5f8573f0450d20c8cf47f45e4bd964c}{GetPosition}}();\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classDroneDeco_ab6576989565e0fc14d6deb1b024ece1f}{GetDirection}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_a06f70196245814bed4d3757ee46b5f84}{GetDirection}}();\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classDroneDeco_ac47ced39d6f0830d99590d8bcad85029}{GetDestination}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_a1f9bc71d6b097c82dc03e29446a9a714}{GetDestination}}();\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ [[nodiscard]]\ JsonObject\ \mbox{\hyperlink{classDroneDeco_a4709b624744a4d505076f87d8a536142}{GetDetails}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_ad544754bc38661c005a3e90335d7767c}{GetDetails}}();\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classDroneDeco_a0e7a687191dd83600ec5916cc62405b8}{GetSpeed}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_aa52b337112a48a7abe67366343b133de}{GetSpeed}}();\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classDroneDeco_a2698689557b331dd21837c9df3928578}{GetColor}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_a37ef94b1a742c41f75cb669d48754c4a}{GetColor}}();\ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDroneDeco_abe3dd8d26c3be44487abe0b2fc9452da}{GetAvailability}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_a1642ae1a1368088290cd44197fa07d3b}{GetAvailability}}();\ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDroneDeco_a6c80f1e860b42c4491c10157adb32ca0}{GetNearestEntity}}(\textcolor{keyword}{const}\ std::vector<IEntity\ *>\ \&scheduler)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_a628fc0cf66f64c88b6a0804e85170728}{GetNearestEntity}}(scheduler);}
+\DoxyCodeLine{00101\ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDroneDeco_afc72b8f5e0918fe79e31254f03c8fb90}{SetPosition}}(\mbox{\hyperlink{classVector3}{Vector3}}\ pos\_)\textcolor{keyword}{\ override\ }\{\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_a7db7ae10e41106439dde749d59a23d7c}{SetPosition}}(pos\_);\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDroneDeco_abc80d7769982c89b834127fee53402b9}{SetDirection}}(\mbox{\hyperlink{classVector3}{Vector3}}\ dir\_)\textcolor{keyword}{\ override\ }\{\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_ab9fcca584928c65fc5edaaba0c153164}{SetDirection}}(dir\_);\ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDroneDeco_ab7ea0ae66ef0caf697146281c82bd779}{SetDestination}}(\mbox{\hyperlink{classVector3}{Vector3}}\ des\_)\textcolor{keyword}{\ override\ }\{\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_a8667fd0c85c145c7745651ad5a1b08b9}{SetDestination}}(des\_);\ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDroneDeco_ae3d3625b15d2817117c9a7d5476722d6}{SetColor}}(\textcolor{keyword}{const}\ std::string\ \&col\_)\textcolor{keyword}{\ override\ }\{\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_abf588bf30455314cac77373386273de4}{SetColor}}(col\_);\ \}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDroneDeco_a097bc9c9dbc3ac068489d9be5e2bdf27}{Rotate}}(\textcolor{keywordtype}{double}\ angle)\textcolor{keyword}{\ override\ }\{\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_adb8af37d811c7f5131d5e048c3f89dc5}{Rotate}}(angle);\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00137\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDroneDeco_af8d6b1729dd7fbffc08fed12e53c8230}{Jump}}(\textcolor{keywordtype}{double}\ height)\textcolor{keyword}{\ override\ }\{\ \mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}-\/>\mbox{\hyperlink{classDrone_a724b8a72357c589fea7dd28aed4e75f6}{Jump}}(height);\ \}}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00144\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classDroneDeco_a03f293d6eae9050630287047f6a4394c}{droneGraph}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \mbox{\hyperlink{classDrone}{Drone}}\ *\mbox{\hyperlink{classDroneDeco_a82fcb47a824226559bb5de5ef04f642d}{host\_drone}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00150\ \};}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

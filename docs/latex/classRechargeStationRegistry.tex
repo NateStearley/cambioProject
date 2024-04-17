@@ -1,0 +1,99 @@
+\hypertarget{classRechargeStationRegistry}{}\doxysection{Recharge\+Station\+Registry Class Reference}
+\label{classRechargeStationRegistry}\index{RechargeStationRegistry@{RechargeStationRegistry}}
+
+
+Singleton class that stores all \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} instances created by a \mbox{\hyperlink{classRechargeStationFactory}{Recharge\+Station\+Factory}}. Allows for the closest recharge station to a 3D position and for a random 3D position of a recharge station to be queried.  
+
+
+
+
+{\ttfamily \#include $<$Charging\+Station\+Registry.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} $\ast$ \mbox{\hyperlink{classRechargeStationRegistry_af78141309ea0e7a40b8327832a2605f3}{get\+Nearest\+Recharge\+Station}} (\mbox{\hyperlink{classVector3}{Vector3}} position) const
+\begin{DoxyCompactList}\small\item\em Finds the nearest recharge station to the given position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRechargeStationRegistry_ae8af9dc6012dc57cdb7aa63e8d594c77}{add\+Recharge\+Station}} (\mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} $\ast$new\+Station)
+\begin{DoxyCompactList}\small\item\em Registers the given recharge station with this registry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRechargeStationRegistry_aedf5a22e1fd8d8cd3cd48a684ba61f35}\label{classRechargeStationRegistry_aedf5a22e1fd8d8cd3cd48a684ba61f35}} 
+{\bfseries Recharge\+Station\+Registry} (\mbox{\hyperlink{classRechargeStationRegistry}{Recharge\+Station\+Registry}} \&other)=delete
+\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classRechargeStationRegistry_ae1dbd07e15ce4b687e160b5b99fb7040}{random\+Station\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the 3D position of a random registered \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} or the origin if no recharge stations are registered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classRechargeStationRegistry}{Recharge\+Station\+Registry}} $\ast$ \mbox{\hyperlink{classRechargeStationRegistry_aa00f646caec728f25adfba0e07392dc3}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of this class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class that stores all \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} instances created by a \mbox{\hyperlink{classRechargeStationFactory}{Recharge\+Station\+Factory}}. Allows for the closest recharge station to a 3D position and for a random 3D position of a recharge station to be queried. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRechargeStationRegistry_ae8af9dc6012dc57cdb7aa63e8d594c77}\label{classRechargeStationRegistry_ae8af9dc6012dc57cdb7aa63e8d594c77}} 
+\index{RechargeStationRegistry@{RechargeStationRegistry}!addRechargeStation@{addRechargeStation}}
+\index{addRechargeStation@{addRechargeStation}!RechargeStationRegistry@{RechargeStationRegistry}}
+\doxysubsubsection{\texorpdfstring{addRechargeStation()}{addRechargeStation()}}
+{\footnotesize\ttfamily void Recharge\+Station\+Registry\+::add\+Recharge\+Station (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} $\ast$}]{new\+Station }\end{DoxyParamCaption})}
+
+
+
+Registers the given recharge station with this registry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Station} & the new station to register \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRechargeStationRegistry_aa00f646caec728f25adfba0e07392dc3}\label{classRechargeStationRegistry_aa00f646caec728f25adfba0e07392dc3}} 
+\index{RechargeStationRegistry@{RechargeStationRegistry}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!RechargeStationRegistry@{RechargeStationRegistry}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRechargeStationRegistry}{Recharge\+Station\+Registry}} $\ast$ Recharge\+Station\+Registry\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of this class. 
+
+\begin{DoxyReturn}{Returns}
+the instance of the \mbox{\hyperlink{classRechargeStationRegistry}{Recharge\+Station\+Registry}} singleton 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRechargeStationRegistry_af78141309ea0e7a40b8327832a2605f3}\label{classRechargeStationRegistry_af78141309ea0e7a40b8327832a2605f3}} 
+\index{RechargeStationRegistry@{RechargeStationRegistry}!getNearestRechargeStation@{getNearestRechargeStation}}
+\index{getNearestRechargeStation@{getNearestRechargeStation}!RechargeStationRegistry@{RechargeStationRegistry}}
+\doxysubsubsection{\texorpdfstring{getNearestRechargeStation()}{getNearestRechargeStation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} $\ast$ Recharge\+Station\+Registry\+::get\+Nearest\+Recharge\+Station (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{position }\end{DoxyParamCaption}) const}
+
+
+
+Finds the nearest recharge station to the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & the position at which to find the nearest recharge station to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the nearest recharge station to the given position or {\ttfamily nullptr} if no recharge stations are registered. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRechargeStationRegistry_ae1dbd07e15ce4b687e160b5b99fb7040}\label{classRechargeStationRegistry_ae1dbd07e15ce4b687e160b5b99fb7040}} 
+\index{RechargeStationRegistry@{RechargeStationRegistry}!randomStationPosition@{randomStationPosition}}
+\index{randomStationPosition@{randomStationPosition}!RechargeStationRegistry@{RechargeStationRegistry}}
+\doxysubsubsection{\texorpdfstring{randomStationPosition()}{randomStationPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Recharge\+Station\+Registry\+::random\+Station\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the 3D position of a random registered \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} or the origin if no recharge stations are registered. 
+
+\begin{DoxyReturn}{Returns}
+the 3D position of a random registered \mbox{\hyperlink{classRechargeStation}{Recharge\+Station}} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/oneil786/csci-\/3081w-\/\+S23/\+Team-\/010-\/28-\/homework4/libs/transit/include/Charging\+Station\+Registry.\+h\item 
+/home/oneil786/csci-\/3081w-\/\+S23/\+Team-\/010-\/28-\/homework4/libs/transit/src/Charging\+Station\+Registry.\+cc\end{DoxyCompactItemize}

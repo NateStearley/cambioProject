@@ -1,0 +1,6 @@
+<map id="ElectricDrone" name="ElectricDrone">
+<area shape="rect" id="node1" title="A DroneDeco implementation that adds battery functionality to a Drone. All trips that an ElectricDron..." alt="" coords="5,247,115,273"/>
+<area shape="rect" id="node2" href="$classDroneDeco.html" title="A decorator class that wraps a Drone implementation, forwarding all method calls to the host drone ex..." alt="" coords="13,171,107,197"/>
+<area shape="rect" id="node3" href="$classDrone.html" title="Represents a drone in a physical system. Drones move using euler integration based on a specified vel..." alt="" coords="29,81,91,108"/>
+<area shape="rect" id="node4" href="$classIEntity.html" title="Represents an entity in a physical system." alt="" coords="28,5,92,32"/>
+</map>

@@ -1,0 +1,252 @@
+\hypertarget{classHuman}{}\doxysection{Human Class Reference}
+\label{classHuman}\index{Human@{Human}}
+
+
+{\ttfamily \#include $<$Human.\+h$>$}
+
+
+
+Inheritance diagram for Human\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{classHuman__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Human\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{classHuman__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHuman_acc063ebc1748add91092a9fd3302f03e}{Human}} (Json\+Object \&obj)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classHuman}{Human}} are created with a name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHuman_a0b90091f81629c42c463108afb2728ea}\label{classHuman_a0b90091f81629c42c463108afb2728ea}} 
+\mbox{\hyperlink{classHuman_a0b90091f81629c42c463108afb2728ea}{$\sim$\+Human}} () override
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classHuman}{Human}} object. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classHuman_afdeeb615043820d86732dcf2de61a5ea}{Get\+Speed}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the speed of the \mbox{\hyperlink{classHuman}{Human}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classHuman_a210780a654f79d02cd92d3e600f400b2}{Get\+Position}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the position of the \mbox{\hyperlink{classHuman}{Human}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classHuman_a742a1f7c4981d1704ed62af845d42b5b}{Get\+Direction}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the direction of the \mbox{\hyperlink{classHuman}{Human}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVector3}{Vector3}} \mbox{\hyperlink{classHuman_ac1c38613261896e83c65b985816f44f9}{Get\+Destination}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the destination of the \mbox{\hyperlink{classHuman}{Human}}. \end{DoxyCompactList}\item 
+Json\+Object \mbox{\hyperlink{classHuman_ac84be6764551ae55e58bdc706728e590}{Get\+Details}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the details information of the \mbox{\hyperlink{classHuman}{Human}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHuman_ab43c39fc24ce338ca2b8438f4f3c0b16}{Update}} (double dt, const std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ \&scheduler) override
+\begin{DoxyCompactList}\small\item\em Updates the \mbox{\hyperlink{classHuman}{Human}}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHuman_adfb3c78f2f9172985e852c05b58e4c0b}{Set\+Position}} (\mbox{\hyperlink{classVector3}{Vector3}} pos\+\_\+) override
+\begin{DoxyCompactList}\small\item\em Sets the position of the \mbox{\hyperlink{classHuman}{Human}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHuman_a97d34f82ce39ff305fa49a44c9254d25}{Set\+Direction}} (\mbox{\hyperlink{classVector3}{Vector3}} dir\+\_\+) override
+\begin{DoxyCompactList}\small\item\em Sets the direction of the \mbox{\hyperlink{classHuman}{Human}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHuman_adc8d3ab339fa9da378c8432174cb006e}{Set\+Destination}} (\mbox{\hyperlink{classVector3}{Vector3}} des\+\_\+) override
+\begin{DoxyCompactList}\small\item\em Sets the destination of the \mbox{\hyperlink{classHuman}{Human}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHuman_a72bd78348618190218e118f305189bab}{Create\+New\+Destination}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classIEntity}{I\+Entity}} implementation that functions as a human. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHuman_acc063ebc1748add91092a9fd3302f03e}\label{classHuman_acc063ebc1748add91092a9fd3302f03e}} 
+\index{Human@{Human}!Human@{Human}}
+\index{Human@{Human}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{Human()}{Human()}}
+{\footnotesize\ttfamily Human\+::\+Human (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classHuman}{Human}} are created with a name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & J\+S\+ON object containing the drone\textquotesingle{}s information \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHuman_a72bd78348618190218e118f305189bab}\label{classHuman_a72bd78348618190218e118f305189bab}} 
+\index{Human@{Human}!CreateNewDestination@{CreateNewDestination}}
+\index{CreateNewDestination@{CreateNewDestination}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{CreateNewDestination()}{CreateNewDestination()}}
+{\footnotesize\ttfamily void Human\+::\+Create\+New\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Select a random new destination and start travelling to it using the A$\ast$ pathing algorithm. \mbox{\Hypertarget{classHuman_ac1c38613261896e83c65b985816f44f9}\label{classHuman_ac1c38613261896e83c65b985816f44f9}} 
+\index{Human@{Human}!GetDestination@{GetDestination}}
+\index{GetDestination@{GetDestination}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{GetDestination()}{GetDestination()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Human\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the destination of the \mbox{\hyperlink{classHuman}{Human}}. 
+
+\begin{DoxyReturn}{Returns}
+The destination of the \mbox{\hyperlink{classHuman}{Human}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a0dcaf865938ab1fb49c8389b5e580d90}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHuman_ac84be6764551ae55e58bdc706728e590}\label{classHuman_ac84be6764551ae55e58bdc706728e590}} 
+\index{Human@{Human}!GetDetails@{GetDetails}}
+\index{GetDetails@{GetDetails}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{GetDetails()}{GetDetails()}}
+{\footnotesize\ttfamily Json\+Object Human\+::\+Get\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the details information of the \mbox{\hyperlink{classHuman}{Human}}. 
+
+\begin{DoxyReturn}{Returns}
+The details information of the \mbox{\hyperlink{classHuman}{Human}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a97c799400ce05e2ff2566adc4d7b9634}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHuman_a742a1f7c4981d1704ed62af845d42b5b}\label{classHuman_a742a1f7c4981d1704ed62af845d42b5b}} 
+\index{Human@{Human}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Human\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the direction of the \mbox{\hyperlink{classHuman}{Human}}. 
+
+\begin{DoxyReturn}{Returns}
+The direction of the \mbox{\hyperlink{classHuman}{Human}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_aa99a8fef8b22195a5113c38ef51f086d}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHuman_a210780a654f79d02cd92d3e600f400b2}\label{classHuman_a210780a654f79d02cd92d3e600f400b2}} 
+\index{Human@{Human}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVector3}{Vector3}} Human\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the position of the \mbox{\hyperlink{classHuman}{Human}}. 
+
+\begin{DoxyReturn}{Returns}
+The position of the \mbox{\hyperlink{classHuman}{Human}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a9bc32587aab91761fc0e718612498199}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHuman_afdeeb615043820d86732dcf2de61a5ea}\label{classHuman_afdeeb615043820d86732dcf2de61a5ea}} 
+\index{Human@{Human}!GetSpeed@{GetSpeed}}
+\index{GetSpeed@{GetSpeed}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{GetSpeed()}{GetSpeed()}}
+{\footnotesize\ttfamily float Human\+::\+Get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the speed of the \mbox{\hyperlink{classHuman}{Human}}. 
+
+\begin{DoxyReturn}{Returns}
+The speed of the \mbox{\hyperlink{classHuman}{Human}} 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntity_a6520d2b1dc71d092bab38ef9f5cc9ff4}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHuman_adc8d3ab339fa9da378c8432174cb006e}\label{classHuman_adc8d3ab339fa9da378c8432174cb006e}} 
+\index{Human@{Human}!SetDestination@{SetDestination}}
+\index{SetDestination@{SetDestination}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{SetDestination()}{SetDestination()}}
+{\footnotesize\ttfamily void Human\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{des\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the destination of the \mbox{\hyperlink{classHuman}{Human}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em des\+\_\+} & The new destination of the \mbox{\hyperlink{classHuman}{Human}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_aa473000823f673e9d7b89aed3cd3fc5c}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHuman_a97d34f82ce39ff305fa49a44c9254d25}\label{classHuman_a97d34f82ce39ff305fa49a44c9254d25}} 
+\index{Human@{Human}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Human\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{dir\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the direction of the \mbox{\hyperlink{classHuman}{Human}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+\_\+} & The new direction of the \mbox{\hyperlink{classHuman}{Human}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a64bfaa448a929ca71693ff3e2edb9d97}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHuman_adfb3c78f2f9172985e852c05b58e4c0b}\label{classHuman_adfb3c78f2f9172985e852c05b58e4c0b}} 
+\index{Human@{Human}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily void Human\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVector3}{Vector3}}}]{pos\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the position of the \mbox{\hyperlink{classHuman}{Human}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+} & The new position of the \mbox{\hyperlink{classHuman}{Human}} \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_af0475048b09dc13ed6cf8e7c7be2ae6b}{I\+Entity}}.
+
+\mbox{\Hypertarget{classHuman_ab43c39fc24ce338ca2b8438f4f3c0b16}\label{classHuman_ab43c39fc24ce338ca2b8438f4f3c0b16}} 
+\index{Human@{Human}!Update@{Update}}
+\index{Update@{Update}!Human@{Human}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Human\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ \&}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the \mbox{\hyperlink{classHuman}{Human}}\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time \\
+\hline
+{\em scheduler} & Vector containing all the entities in the system \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classIEntity_a4f46d66775cc404c76064908d6c2090d}{I\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/oneil786/csci-\/3081w-\/\+S23/\+Team-\/010-\/28-\/homework4/libs/transit/include/Human.\+h\item 
+/home/oneil786/csci-\/3081w-\/\+S23/\+Team-\/010-\/28-\/homework4/libs/transit/src/Human.\+cc\end{DoxyCompactItemize}

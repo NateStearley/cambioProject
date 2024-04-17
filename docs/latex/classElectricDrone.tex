@@ -1,0 +1,123 @@
+\hypertarget{classElectricDrone}{}\doxysection{Electric\+Drone Class Reference}
+\label{classElectricDrone}\index{ElectricDrone@{ElectricDrone}}
+
+
+A \mbox{\hyperlink{classDroneDeco}{Drone\+Deco}} implementation that adds battery functionality to a \mbox{\hyperlink{classDrone}{Drone}}. All trips that an \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} will accept will not cause it to run out of battery. The actual implementation of travelling to, picking up, and dropping off passengers is left to the given host drone implementation.  
+
+
+
+
+{\ttfamily \#include $<$Electric\+Drone.\+h$>$}
+
+
+
+Inheritance diagram for Electric\+Drone\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classElectricDrone__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Electric\+Drone\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=179pt]{classElectricDrone__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classElectricDrone_a56506676490543ae03a799eb89c7222f}{Electric\+Drone}} (\mbox{\hyperlink{classDrone}{Drone}} $\ast$drone)
+\begin{DoxyCompactList}\small\item\em Creates an \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} with the given drone which wraps the given drone\textquotesingle{}s functionality with battery-\/awareness. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classElectricDrone_ae329ae0c4a6aab584accdf86af9c8ba4}\label{classElectricDrone_ae329ae0c4a6aab584accdf86af9c8ba4}} 
+\mbox{\hyperlink{classElectricDrone_ae329ae0c4a6aab584accdf86af9c8ba4}{$\sim$\+Electric\+Drone}} () override
+\begin{DoxyCompactList}\small\item\em Destructs the host drone and other internal members. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classElectricDrone_a5fbbdd6bccd7bf831903a116667ecd19}{Get\+Battery}} () const
+\begin{DoxyCompactList}\small\item\em Gets the battery amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classElectricDrone_a39c00029a221a0bafa83941b62f71c9c}{Set\+Battery}} (float charge)
+\begin{DoxyCompactList}\small\item\em Sets the battery amount for the host\+\_\+drone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classElectricDrone_a2009881311476a56d4cbb749140d443b}{Update}} (double dt, const std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ \&scheduler) override
+\begin{DoxyCompactList}\small\item\em Updates the entity\textquotesingle{}s position in the physical system. This overridden implementation only allows the host drone to accept a trip if this \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} has enough battery to complete the trip. If this drone does not have enough charge, it is navigated to the nearest recharge station. If this \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} has enough charge, it will use the host drone\textquotesingle{}s \mbox{\hyperlink{classDrone_a11e525c730ee22bbd966127b9a99b3c9}{Drone\+::\+Update}} implementation to complete the trip, and afterward it will return to the recharge station closest to the destination. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classDroneDeco}{Drone\+Deco}} implementation that adds battery functionality to a \mbox{\hyperlink{classDrone}{Drone}}. All trips that an \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} will accept will not cause it to run out of battery. The actual implementation of travelling to, picking up, and dropping off passengers is left to the given host drone implementation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classElectricDrone_a56506676490543ae03a799eb89c7222f}\label{classElectricDrone_a56506676490543ae03a799eb89c7222f}} 
+\index{ElectricDrone@{ElectricDrone}!ElectricDrone@{ElectricDrone}}
+\index{ElectricDrone@{ElectricDrone}!ElectricDrone@{ElectricDrone}}
+\doxysubsubsection{\texorpdfstring{ElectricDrone()}{ElectricDrone()}}
+{\footnotesize\ttfamily Electric\+Drone\+::\+Electric\+Drone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDrone}{Drone}} $\ast$}]{drone }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Creates an \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} with the given drone which wraps the given drone\textquotesingle{}s functionality with battery-\/awareness. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drone} & the host drone to wrap \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classElectricDrone_a5fbbdd6bccd7bf831903a116667ecd19}\label{classElectricDrone_a5fbbdd6bccd7bf831903a116667ecd19}} 
+\index{ElectricDrone@{ElectricDrone}!GetBattery@{GetBattery}}
+\index{GetBattery@{GetBattery}!ElectricDrone@{ElectricDrone}}
+\doxysubsubsection{\texorpdfstring{GetBattery()}{GetBattery()}}
+{\footnotesize\ttfamily float Electric\+Drone\+::\+Get\+Battery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the battery amount. 
+
+\begin{DoxyReturn}{Returns}
+The batter amount for the host\+Drone 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classElectricDrone_a39c00029a221a0bafa83941b62f71c9c}\label{classElectricDrone_a39c00029a221a0bafa83941b62f71c9c}} 
+\index{ElectricDrone@{ElectricDrone}!SetBattery@{SetBattery}}
+\index{SetBattery@{SetBattery}!ElectricDrone@{ElectricDrone}}
+\doxysubsubsection{\texorpdfstring{SetBattery()}{SetBattery()}}
+{\footnotesize\ttfamily void Electric\+Drone\+::\+Set\+Battery (\begin{DoxyParamCaption}\item[{float}]{charge }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the battery amount for the host\+\_\+drone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em charge} & a new charge for the battery \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classElectricDrone_a2009881311476a56d4cbb749140d443b}\label{classElectricDrone_a2009881311476a56d4cbb749140d443b}} 
+\index{ElectricDrone@{ElectricDrone}!Update@{Update}}
+\index{Update@{Update}!ElectricDrone@{ElectricDrone}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Electric\+Drone\+::\+Update (\begin{DoxyParamCaption}\item[{double}]{dt,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ $>$ \&}]{scheduler }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the entity\textquotesingle{}s position in the physical system. This overridden implementation only allows the host drone to accept a trip if this \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} has enough battery to complete the trip. If this drone does not have enough charge, it is navigated to the nearest recharge station. If this \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} has enough charge, it will use the host drone\textquotesingle{}s \mbox{\hyperlink{classDrone_a11e525c730ee22bbd966127b9a99b3c9}{Drone\+::\+Update}} implementation to complete the trip, and afterward it will return to the recharge station closest to the destination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & the time in seconds since this method was last called \\
+\hline
+{\em scheduler} & a list containing all the entities in the system \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classDroneDeco_a983290f9180f6cb1b602d20792fb4bc8}{Drone\+Deco}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/oneil786/csci-\/3081w-\/\+S23/\+Team-\/010-\/28-\/homework4/libs/transit/include/Electric\+Drone.\+h\item 
+/home/oneil786/csci-\/3081w-\/\+S23/\+Team-\/010-\/28-\/homework4/libs/transit/src/Electric\+Drone.\+cc\end{DoxyCompactItemize}

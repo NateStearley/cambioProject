@@ -1,0 +1,10 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classIEntity.html" title="Represents an entity in a physical system." alt="" coords="5,107,69,133"/>
+<area shape="rect" id="node2" href="$classDrone.html" title="Represents a drone in a physical system. Drones move using euler integration based on a specified vel..." alt="" coords="151,5,213,32"/>
+<area shape="rect" id="node5" href="$classHelicopter.html" title=" " alt="" coords="137,56,227,83"/>
+<area shape="rect" id="node6" href="$classHuman.html" title=" " alt="" coords="147,107,217,133"/>
+<area shape="rect" id="node7" href="$classRechargeStation.html" title="An IEntity implementation that contains functionality to recharge ElectricDrone instances." alt="" coords="117,157,247,184"/>
+<area shape="rect" id="node8" href="$classRobot.html" title="Represents a robot in a physical system." alt="" coords="152,208,212,235"/>
+<area shape="rect" id="node3" href="$classDroneDeco.html" title="A decorator class that wraps a Drone implementation, forwarding all method calls to the host drone ex..." alt="" coords="295,5,389,32"/>
+<area shape="rect" id="node4" href="$classElectricDrone.html" title="A DroneDeco implementation that adds battery functionality to a Drone. All trips that an ElectricDron..." alt="" coords="437,5,547,32"/>
+</map>

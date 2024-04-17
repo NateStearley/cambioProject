@@ -1,0 +1,25 @@
+\hypertarget{BeelineStrategy_8h_source}{}\doxysection{Beeline\+Strategy.\+h}
+\label{BeelineStrategy_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/BeelineStrategy.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/BeelineStrategy.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BEELINE\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BEELINE\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}IEntity.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}IStrategy.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBeelineStrategy}{BeelineStrategy}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIStrategy}{IStrategy}}\ \{}
+\DoxyCodeLine{00012\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \mbox{\hyperlink{classBeelineStrategy}{BeelineStrategy}}(\mbox{\hyperlink{classVector3}{Vector3}}\ position,\ \mbox{\hyperlink{classVector3}{Vector3}}\ destination);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBeelineStrategy_ab68bd4dead6261092cd83d46b9ab2615}{Move}}(\mbox{\hyperlink{classIEntity}{IEntity}}\ *entity,\ \textcolor{keywordtype}{double}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBeelineStrategy_a13b9cb6f9e7c84fb9dd480ddee815a46}{IsCompleted}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \mbox{\hyperlink{classVector3}{Vector3}}\ position;}
+\DoxyCodeLine{00038\ \ \ \mbox{\hyperlink{classVector3}{Vector3}}\ destination;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ BEELINE\_H\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,5 @@
+<map id="DroneDeco" name="DroneDeco">
+<area shape="rect" id="node1" title="A decorator class that wraps a Drone implementation, forwarding all method calls to the host drone ex..." alt="" coords="5,171,100,197"/>
+<area shape="rect" id="node2" href="$classDrone.html" title="Represents a drone in a physical system. Drones move using euler integration based on a specified vel..." alt="" coords="22,81,83,108"/>
+<area shape="rect" id="node3" href="$classIEntity.html" title="Represents an entity in a physical system." alt="" coords="21,5,85,32"/>
+</map>

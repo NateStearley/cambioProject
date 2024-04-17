@@ -1,0 +1,42 @@
+\hypertarget{RechargeStation_8h_source}{}\doxysection{Recharge\+Station.\+h}
+\label{RechargeStation_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/RechargeStation.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/RechargeStation.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RECHARGE\_STATION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RECHARGE\_STATION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}IEntity.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}math/vector3.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ DEFAULT\_RECHARGE\_SPEED\ =\ 6;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRechargeStation}{RechargeStation}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIEntity}{IEntity}}\ \{}
+\DoxyCodeLine{00021\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classRechargeStation}{RechargeStation}}(JsonObject\ \&obj);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{classRechargeStation_aa6881517a3fb89c1ea84bc5979a56370}{\string~RechargeStation}}()\textcolor{keyword}{\ override\ }\{\ \mbox{\hyperlink{classIEntity_a5d4d1c3d5da8a816fe03522cd0b4fcb3}{graph}}\ =\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classRechargeStation_a17fd2659153ac8da752b772973d0174e}{GetPosition}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ position;\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classRechargeStation_ad0c1f21a997cb800fa4223221d478b63}{GetDirection}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \{\};\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classRechargeStation_a93772707eee982e46596a23a93c31478}{GetDestination}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \{\};\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ [[nodiscard]]\ JsonObject\ \mbox{\hyperlink{classRechargeStation_a9ee1f44274402c473ea2ee7a8b68a459}{GetDetails}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ details;\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classRechargeStation_a1dac488090f60df0866a2a74fd72b590}{GetSpeed}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRechargeStation_a7f564610eb7f2d1536859870c600a90b}{Recharge}}(\mbox{\hyperlink{classIEntity}{IEntity}}\ *entity,\ \textcolor{keywordtype}{float}\ charge)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00076\ \ \ \mbox{\hyperlink{classVector3}{Vector3}}\ position;}
+\DoxyCodeLine{00077\ \ \ JsonObject\ details;}
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{int}\ recharge\_speed\ =\ DEFAULT\_RECHARGE\_SPEED;}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

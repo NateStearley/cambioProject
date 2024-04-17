@@ -1,0 +1,27 @@
+\hypertarget{CelebrationDecorator_8h_source}{}\doxysection{Celebration\+Decorator.\+h}
+\label{CelebrationDecorator_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/CelebrationDecorator.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/CelebrationDecorator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CELEBRATION\_DECORATOR\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CELEBRATION\_DECORATOR\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}IStrategy.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCelebrationDecorator}{CelebrationDecorator}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIStrategy}{IStrategy}}\ \{}
+\DoxyCodeLine{00011\ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \ \ \mbox{\hyperlink{classIStrategy}{IStrategy}}\ *\mbox{\hyperlink{classCelebrationDecorator_abd8ba74a8cf4dc060feac318fc10e2a9}{strategy}};}
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classCelebrationDecorator_ab6c0f2a022f2d9df9345e3e5a8cbe7b1}{time}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classCelebrationDecorator}{CelebrationDecorator}}(\mbox{\hyperlink{classIStrategy}{IStrategy}}\ *\mbox{\hyperlink{classCelebrationDecorator_abd8ba74a8cf4dc060feac318fc10e2a9}{strategy}});}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{classCelebrationDecorator_a9fcad7f9bf7b4a7e9015df97fc0c60b5}{\string~CelebrationDecorator}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCelebrationDecorator_a27a21d2398988b9915dba7f667c2c248}{Move}}(\mbox{\hyperlink{classIEntity}{IEntity}}\ *entity,\ \textcolor{keywordtype}{double}\ dt)\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classCelebrationDecorator_ad464c222ab4496c2555de7f08a2846ef}{IsCompleted}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00048\ \};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ CELEBRATION\_DECORATOR\_H\_}}
+
+\end{DoxyCode}

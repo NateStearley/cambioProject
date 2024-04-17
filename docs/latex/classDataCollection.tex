@@ -1,0 +1,99 @@
+\hypertarget{classDataCollection}{}\doxysection{Data\+Collection Class Reference}
+\label{classDataCollection}\index{DataCollection@{DataCollection}}
+
+
+Singleton class that stores the instance for data collection. Allows for writing to the csv file for both a history of the simulation and the final amounts for the data.  
+
+
+
+
+{\ttfamily \#include $<$Data\+Collection.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDataCollection_ad827a7c32193b2852a54ba72036865fb}{Data\+Collection}} (\mbox{\hyperlink{classDataCollection}{Data\+Collection}} \&other)=delete
+\begin{DoxyCompactList}\small\item\em Delete the copy constructor so the singleton instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDataCollection_a0c5deeb8661f0aa788d90c30a6b80acc}{write\+Trip}} (\mbox{\hyperlink{structDroneTotals}{Drone\+Totals}} dats)
+\begin{DoxyCompactList}\small\item\em Writes the trip data for constructing the history table in the csv. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataCollection_aad73db3bde5b8c96ddc8438d79d641a7}\label{classDataCollection_aad73db3bde5b8c96ddc8438d79d641a7}} 
+void \mbox{\hyperlink{classDataCollection_aad73db3bde5b8c96ddc8438d79d641a7}{write\+Results}} ()
+\begin{DoxyCompactList}\small\item\em Reads the csv file to compile the totals for each drone and create the final results table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classDataCollection}{Data\+Collection}} $\ast$ \mbox{\hyperlink{classDataCollection_a9ee0046536789c7887d93c9a7a325b8c}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of this class. \end{DoxyCompactList}\item 
+static fstream $\ast$ \mbox{\hyperlink{classDataCollection_a97c9f7a76232cc1a296874a7e777b6ac}{get\+Fstream}} ()
+\begin{DoxyCompactList}\small\item\em Gets the filestream for writing to the data collection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class that stores the instance for data collection. Allows for writing to the csv file for both a history of the simulation and the final amounts for the data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDataCollection_ad827a7c32193b2852a54ba72036865fb}\label{classDataCollection_ad827a7c32193b2852a54ba72036865fb}} 
+\index{DataCollection@{DataCollection}!DataCollection@{DataCollection}}
+\index{DataCollection@{DataCollection}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{DataCollection()}{DataCollection()}}
+{\footnotesize\ttfamily Data\+Collection\+::\+Data\+Collection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDataCollection}{Data\+Collection}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Delete the copy constructor so the singleton instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & a different instance of the data\+Collection, this is not used \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataCollection_a97c9f7a76232cc1a296874a7e777b6ac}\label{classDataCollection_a97c9f7a76232cc1a296874a7e777b6ac}} 
+\index{DataCollection@{DataCollection}!getFstream@{getFstream}}
+\index{getFstream@{getFstream}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{getFstream()}{getFstream()}}
+{\footnotesize\ttfamily fstream $\ast$ Data\+Collection\+::get\+Fstream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the filestream for writing to the data collection. 
+
+\begin{DoxyReturn}{Returns}
+the filestream for writing to the csv file 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataCollection_a9ee0046536789c7887d93c9a7a325b8c}\label{classDataCollection_a9ee0046536789c7887d93c9a7a325b8c}} 
+\index{DataCollection@{DataCollection}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDataCollection}{Data\+Collection}} $\ast$ Data\+Collection\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of this class. 
+
+\begin{DoxyReturn}{Returns}
+the instance of the \mbox{\hyperlink{classDataCollection}{Data\+Collection}} singleton 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataCollection_a0c5deeb8661f0aa788d90c30a6b80acc}\label{classDataCollection_a0c5deeb8661f0aa788d90c30a6b80acc}} 
+\index{DataCollection@{DataCollection}!writeTrip@{writeTrip}}
+\index{writeTrip@{writeTrip}!DataCollection@{DataCollection}}
+\doxysubsubsection{\texorpdfstring{writeTrip()}{writeTrip()}}
+{\footnotesize\ttfamily void Data\+Collection\+::write\+Trip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDroneTotals}{Drone\+Totals}}}]{dats }\end{DoxyParamCaption})}
+
+
+
+Writes the trip data for constructing the history table in the csv. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dats} & variable that holds the data to be written to the csv \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/oneil786/csci-\/3081w-\/\+S23/\+Team-\/010-\/28-\/homework4/libs/transit/include/Data\+Collection.\+h\item 
+/home/oneil786/csci-\/3081w-\/\+S23/\+Team-\/010-\/28-\/homework4/libs/transit/src/Data\+Collection.\+cc\end{DoxyCompactItemize}

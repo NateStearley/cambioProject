@@ -1,0 +1,60 @@
+\hypertarget{Robot_8h_source}{}\doxysection{Robot.\+h}
+\label{Robot_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/Robot.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/Robot.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ROBOT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ROBOT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}IEntity.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}math/vector3.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}util/json.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRobot}{Robot}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classIEntity}{IEntity}}\ \{}
+\DoxyCodeLine{00018\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classRobot}{Robot}}(JsonObject\ \&obj);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{classRobot_aaebd01dcf34c68472a76d35ace88be23}{\string~Robot}}()\textcolor{keyword}{\ override\ }\{\ \mbox{\hyperlink{classIEntity_a5d4d1c3d5da8a816fe03522cd0b4fcb3}{graph}}\ =\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classRobot_ae33797028f07a59f6328e2d920114bac}{GetPosition}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ position;\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classRobot_aa0c336ac44d2aaa12b9317d05060e7ab}{GetDirection}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ direction;\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classRobot_a2b44f342777bda4702ed55ac1da93eed}{GetDestination}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ destination;\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classRobot_ab9d63bc7a71e857214198d3191914845}{GetAvailability}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ available;\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ [[nodiscard]]\ JsonObject\ \mbox{\hyperlink{classRobot_a0ac023c6fb5d7ad58b180903010d2924}{GetDetails}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classRobot_a00f2905dd3562b56b5e80d4570dd4a2c}{GetSpeed}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ speed;\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{classRobot_adff26d89266e0f240e17a1261f80afd2}{GetStrategyName}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ strategyName;\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a4318b133a5ddc0a58a574dbff5ac86ca}{SetStrategyName}}(\textcolor{keyword}{const}\ std::string\ \&strategyName\_)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00079\ \ \ \ \ strategyName\ =\ strategyName\_;}
+\DoxyCodeLine{00080\ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a08c1216b75f9969147826471cb31a06b}{SetAvailability}}(\textcolor{keywordtype}{bool}\ choice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00092\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a26cae7e1fab4c74dad090d3b999ea215}{SetPosition}}(\mbox{\hyperlink{classVector3}{Vector3}}\ pos\_)\textcolor{keyword}{\ override\ }\{\ position\ =\ pos\_;\ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a5b680e832e62649070d689e813709f40}{SetDirection}}(\mbox{\hyperlink{classVector3}{Vector3}}\ dir\_)\textcolor{keyword}{\ override\ }\{\ direction\ =\ dir\_;\ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a84567a220dfc61a1205b49c579131e07}{SetDestination}}(\mbox{\hyperlink{classVector3}{Vector3}}\ des\_)\textcolor{keyword}{\ override\ }\{\ destination\ =\ des\_;\ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRobot_a0a561e3eb0c70d346925eec14721487a}{Rotate}}(\textcolor{keywordtype}{double}\ angle)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00113\ \ \ JsonObject\ details;}
+\DoxyCodeLine{00114\ \ \ \mbox{\hyperlink{classVector3}{Vector3}}\ position;}
+\DoxyCodeLine{00115\ \ \ \mbox{\hyperlink{classVector3}{Vector3}}\ direction;}
+\DoxyCodeLine{00116\ \ \ \mbox{\hyperlink{classVector3}{Vector3}}\ destination;}
+\DoxyCodeLine{00117\ \ \ \textcolor{keywordtype}{float}\ speed;}
+\DoxyCodeLine{00118\ \ \ \textcolor{keywordtype}{bool}\ available;}
+\DoxyCodeLine{00119\ \ \ std::string\ strategyName;}
+\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ ROBOT\_H}}
+
+\end{DoxyCode}

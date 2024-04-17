@@ -1,0 +1,71 @@
+\hypertarget{classElectricDroneFactory}{}\doxysection{Electric\+Drone\+Factory Class Reference}
+\label{classElectricDroneFactory}\index{ElectricDroneFactory@{ElectricDroneFactory}}
+
+
+An \mbox{\hyperlink{classIEntityFactory}{I\+Entity\+Factory}} implementation that produces \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} instances if the given Json\+Object has the correct properties.  
+
+
+
+
+{\ttfamily \#include $<$Electric\+Drone\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for Electric\+Drone\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classElectricDroneFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Electric\+Drone\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classElectricDroneFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classElectricDroneFactory_a7f2aaa897f2c0b98dac68698413b8dc5}\label{classElectricDroneFactory_a7f2aaa897f2c0b98dac68698413b8dc5}} 
+\mbox{\hyperlink{classElectricDroneFactory_a7f2aaa897f2c0b98dac68698413b8dc5}{$\sim$\+Electric\+Drone\+Factory}} () override=default
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classElectricDroneFactory}{Electric\+Drone\+Factory}} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ \mbox{\hyperlink{classElectricDroneFactory_a0c0070d45b65a06676c2dc04e207184f}{Create\+Entity}} (Json\+Object \&entity) override
+\begin{DoxyCompactList}\small\item\em Creates an \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} using the given J\+S\+ON object if it contains the correct properties, specifically, that its {\ttfamily \char`\"{}type\char`\"{}} member is {\ttfamily \char`\"{}\+Electricdrone\char`\"{}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An \mbox{\hyperlink{classIEntityFactory}{I\+Entity\+Factory}} implementation that produces \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} instances if the given Json\+Object has the correct properties. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classElectricDroneFactory_a0c0070d45b65a06676c2dc04e207184f}\label{classElectricDroneFactory_a0c0070d45b65a06676c2dc04e207184f}} 
+\index{ElectricDroneFactory@{ElectricDroneFactory}!CreateEntity@{CreateEntity}}
+\index{CreateEntity@{CreateEntity}!ElectricDroneFactory@{ElectricDroneFactory}}
+\doxysubsubsection{\texorpdfstring{CreateEntity()}{CreateEntity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIEntity}{I\+Entity}} $\ast$ Electric\+Drone\+Factory\+::\+Create\+Entity (\begin{DoxyParamCaption}\item[{Json\+Object \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates an \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} using the given J\+S\+ON object if it contains the correct properties, specifically, that its {\ttfamily \char`\"{}type\char`\"{}} member is {\ttfamily \char`\"{}\+Electricdrone\char`\"{}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & a Json\+Object containing information about the \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} to create \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an \mbox{\hyperlink{classElectricDrone}{Electric\+Drone}} if creation was successful, {\ttfamily nullptr} otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIEntityFactory_a9bd53cf7ca21ab252968062ea5d88180}{I\+Entity\+Factory}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/oneil786/csci-\/3081w-\/\+S23/\+Team-\/010-\/28-\/homework4/libs/transit/include/Electric\+Drone\+Factory.\+h\item 
+/home/oneil786/csci-\/3081w-\/\+S23/\+Team-\/010-\/28-\/homework4/libs/transit/src/Electric\+Drone\+Factory.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,33 @@
+\hypertarget{ChargingStationRegistry_8h_source}{}\doxysection{Charging\+Station\+Registry.\+h}
+\label{ChargingStationRegistry_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/ChargingStationRegistry.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/ChargingStationRegistry.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CSCI3081W\_TEAM28\_LIBS\_TRANSIT\_INCLUDE\_CHARGINGSTATIONREGISTRY\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CSCI3081W\_TEAM28\_LIBS\_TRANSIT\_INCLUDE\_CHARGINGSTATIONREGISTRY\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}RechargeStation.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRechargeStationRegistry}{RechargeStationRegistry}}\ \{}
+\DoxyCodeLine{00012\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classRechargeStationRegistry}{RechargeStationRegistry}}\ *\mbox{\hyperlink{classRechargeStationRegistry_aa00f646caec728f25adfba0e07392dc3}{getInstance}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classRechargeStation}{RechargeStation}}\ *\mbox{\hyperlink{classRechargeStationRegistry_af78141309ea0e7a40b8327832a2605f3}{getNearestRechargeStation}}(\mbox{\hyperlink{classVector3}{Vector3}}\ position)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRechargeStationRegistry_ae8af9dc6012dc57cdb7aa63e8d594c77}{addRechargeStation}}(\mbox{\hyperlink{classRechargeStation}{RechargeStation}}\ *newStation);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{comment}{//\ Delete\ the\ copy\ constructor\ so\ the\ singleton\ instance}}
+\DoxyCodeLine{00037\ \ \ \mbox{\hyperlink{classRechargeStationRegistry}{RechargeStationRegistry}}(\mbox{\hyperlink{classRechargeStationRegistry}{RechargeStationRegistry}}\ \&other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ [[nodiscard]]\ \mbox{\hyperlink{classVector3}{Vector3}}\ \mbox{\hyperlink{classRechargeStationRegistry_ae1dbd07e15ce4b687e160b5b99fb7040}{randomStationPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \mbox{\hyperlink{classRechargeStationRegistry}{RechargeStationRegistry}}()\ \{\}}
+\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{classRechargeStationRegistry}{\string~RechargeStationRegistry}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ std::vector<RechargeStation\ *>}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ recharge\_stations\ =\ std::vector<RechargeStation\ *>();}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//CSCI3081W\_TEAM28\_LIBS\_TRANSIT\_INCLUDE\_CHARGINGSTATIONREGISTRY\_H\_}}
+
+\end{DoxyCode}

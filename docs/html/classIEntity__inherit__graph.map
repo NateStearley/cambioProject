@@ -1,0 +1,10 @@
+<map id="IEntity" name="IEntity">
+<area shape="rect" id="node1" title="Represents an entity in a physical system." alt="" coords="232,5,296,32"/>
+<area shape="rect" id="node2" href="$classDrone.html" title="Represents a drone in a physical system. Drones move using euler integration based on a specified vel..." alt="" coords="29,80,91,107"/>
+<area shape="rect" id="node5" href="$classHelicopter.html" title=" " alt="" coords="115,80,205,107"/>
+<area shape="rect" id="node6" href="$classHuman.html" title=" " alt="" coords="229,80,299,107"/>
+<area shape="rect" id="node7" href="$classRechargeStation.html" title="An IEntity implementation that contains functionality to recharge ElectricDrone instances." alt="" coords="323,80,453,107"/>
+<area shape="rect" id="node8" href="$classRobot.html" title="Represents a robot in a physical system." alt="" coords="477,80,537,107"/>
+<area shape="rect" id="node3" href="$classDroneDeco.html" title="A decorator class that wraps a Drone implementation, forwarding all method calls to the host drone ex..." alt="" coords="13,155,107,181"/>
+<area shape="rect" id="node4" href="$classElectricDrone.html" title="A DroneDeco implementation that adds battery functionality to a Drone. All trips that an ElectricDron..." alt="" coords="5,229,115,256"/>
+</map>

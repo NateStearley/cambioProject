@@ -1,0 +1,50 @@
+\hypertarget{SimulationModel_8h_source}{}\doxysection{Simulation\+Model.\+h}
+\label{SimulationModel_8h_source}\index{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/SimulationModel.h@{/home/username/Documents/School/CSCI3081W/CSCI3081W-\/Team28/libs/transit/include/SimulationModel.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SIMULATION\_MODEL\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SIMULATION\_MODEL\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}CompositeFactory.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Drone.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}IController.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}IEntity.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Robot.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}graph.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }routing;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ \ Model\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSimulationModel}{SimulationModel}}\ \{}
+\DoxyCodeLine{00021\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classSimulationModel}{SimulationModel}}(\mbox{\hyperlink{classIController}{IController}}\ \&\mbox{\hyperlink{classSimulationModel_a3f40b73fbdec1736875da2e6eddd767d}{controller}});}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{classSimulationModel_ad7ea1a37e0992bc0704ac5cb01a59bf4}{\string~SimulationModel}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSimulationModel_aabdf7a935a05b8966ec3fdd66cda0917}{SetGraph}}(\textcolor{keyword}{const}\ IGraph\ *graph\_)\ \{\ this-\/>\mbox{\hyperlink{classSimulationModel_afcef95308f9d635f6ab37f8fb0eb7ba7}{graph}}\ =\ graph\_;\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSimulationModel_a0529fb427560a2bde9b8cb62f82e6baf}{CreateEntity}}(JsonObject\ \&entity);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSimulationModel_a68a4d4927ec49f6f362f7bfb07a96ddc}{ScheduleTrip}}(JsonObject\ \&details);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSimulationModel_ad409c5965a777ef636114eeef8f9ea48}{Update}}(\textcolor{keywordtype}{double}\ dt);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \textcolor{comment}{//\ Adds\ a\ new\ factory}}
+\DoxyCodeLine{00063\ \textcolor{comment}{}\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSimulationModel_a44215da18f82ad591ead5085f6da13f0}{AddFactory}}(\mbox{\hyperlink{classIEntityFactory}{IEntityFactory}}\ *factory);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00069\ \ \ \mbox{\hyperlink{classIController}{IController}}\ \&\mbox{\hyperlink{classSimulationModel_a3f40b73fbdec1736875da2e6eddd767d}{controller}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ std::vector<IEntity\ *>\ \mbox{\hyperlink{classSimulationModel_adf9e34b270fa9f4468ba1ff42b1c2026}{entities}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ std::vector<IEntity\ *>\ \mbox{\hyperlink{classSimulationModel_a24bfe834007b685717f064f79cda1bc5}{scheduler}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \textcolor{keyword}{const}\ IGraph\ *\mbox{\hyperlink{classSimulationModel_afcef95308f9d635f6ab37f8fb0eb7ba7}{graph}};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \mbox{\hyperlink{classCompositeFactory}{CompositeFactory}}\ *\mbox{\hyperlink{classSimulationModel_aef89ec45aa188da7b9d7afa10320294f}{compFactory}};}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
