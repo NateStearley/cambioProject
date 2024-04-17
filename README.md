@@ -8,35 +8,16 @@ This project was created in CSCI 3081W, a software engineering course focusing o
 I worked with three other people to create this and we learned about and used an AGILE/SCRUM workflow. This included creating a product backlog, interviewing clients (our professor) to discuss needs, and running sprints.
 
 ## How to Run the Simulation
-### Running the Program Through Git Cloning
-Clone the repository and navigate to the project directory
-
-To compile and run the program...
-```bash
-# Build the project
-make -j
-
-# Run the project (./build/web-app <port> <web folder>)
-./build/bin/transit_service <PORT> apps/transit_service/web/
-```
-
-Navigate to http://127.0.0.1:<PORT> and you should see a visualization.
-
-Navigate to http://127.0.0.1:<PORT>/schedule.html and you should see a page to schedule the trips.
-
-*Note: <PORT> will depend on what port you want to use. If you use port 8082, then it will be http://127.0.0.1:8082.*
-
-
 ### Running the Program Through Docker
-Sign into DockerHub and navigate to [https://hub.docker.com/r/natestearley/drone_sim](https://hub.docker.com/r/natestearley/drone_sim)
+Sign into DockerHub and navigate to [https://hub.docker.com/r/sean786/complete_drone_sim](https://hub.docker.com/r/sean786/complete_drone_sim)
 
 After cloning the docker image it can be run by doing this
 ```bash
 docker run --rm -it -p <PORT>:<PORT> <image_name>
 ```
-*Note: PORT will depend on what port you want to use. <image_name> will be natestearley/drone_sim. If you use port 8082 then this it what it will look like*
+*Note: PORT will depend on what port you want to use. <image_name> will be sean785/complete_drone_sim. If you use port 8081 then this it what it will look like*
 ```bash
-docker run --rm -it -p 8082:8082 natestearley/drone_sim
+docker run --rm -it -p 8081:8081 sean785/complete_drone_sim
 ```
 
 Navigate to http://127.0.0.1:<PORT> and you should see a visualization.
